@@ -1,0 +1,33 @@
+.services {
+  background-color: var(--light);
+}
+
+.services_header {
+  align-items: center;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.services_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .services_content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .services_content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .services_content {
+    grid-template-columns: 1fr;
+  }
+}

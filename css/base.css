@@ -1,0 +1,155 @@
+:root {
+  /* primary colors */
+  --primary: #f97316;
+  --primary-light: #fed7aa;
+  --primary-lighter: #ffedd5;
+  --primary-dark: #ea580c;
+  --primary-darker: #c2410c;
+  /* dark colors */
+  --dark: #050506;
+  --dark-light: #727272;
+  --dark-lighter: #a1a1a1;
+  --dark-dark: #040405;
+  --dark-darker: #030304;
+  /* light colors */
+  --light: #efeffe;
+  --light-light: #f8f8fe;
+  --light-lighter: #fbfbfe;
+  --light-dark: #b9b9c4;
+  --light-darker: #9797a0;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "montserrat", sans-serif;
+  font-size: 16px;
+  color: var(--dark);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+/* container style */
+
+.container {
+  width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1140px) {
+  .container {
+    width: 991px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 767px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+/* tooltip style */
+.tooltip {
+  font-size: 14px;
+  display: inline-block;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 2px;
+  background-color: var(--primary-lighter);
+  color: var(--primary);
+  border: 0.2px solid var(--primary-light);
+}
+
+/* box style */
+.block {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.block_header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.block_title {
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 550px) {
+  .block_title {
+    font-size: 26px;
+  }
+}
+
+.block_title > span {
+  color: var(--primary);
+}
+
+.block_description {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--dark-light);
+}
+
+/* list style */
+
+.list {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.list_title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.list_item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.list_icon {
+  color: var(--primary);
+}
+
+.list_text {
+  font-weight: 500;
+}

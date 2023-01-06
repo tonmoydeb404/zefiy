@@ -1,0 +1,13 @@
+.page_content {
+  line-height: 1.9;
+}
+
+@media screen and (max-width: 600px) {
+  .page_content {
+    font-size: 15px;
+  }
+
+  .page_content.block {
+    padding: 40px 0;
+  }
+}

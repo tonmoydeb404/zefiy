@@ -1,0 +1,128 @@
+.hero {
+  background-image: var(--bg);
+  background-size: cover;
+  background-color: var(--dark-light);
+  background-blend-mode: multiply;
+  background-position: center;
+  transition: 0.3s background-color;
+}
+
+.hero.slider {
+  animation: heroSlider 10s infinite;
+}
+
+.hero:hover {
+  animation-play-state: paused;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+}
+
+.hero > .container {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hero_title {
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.hero_title > span {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.hero_cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* animation */
+@keyframes heroSlider {
+  0% {
+    background-image: var(--bg1);
+  }
+  25% {
+    background-image: var(--bg2);
+  }
+  50% {
+    background-image: var(--bg3);
+  }
+  75% {
+    background-image: var(--bg4);
+  }
+  100% {
+    background-image: var(--bg1);
+  }
+}
+
+/* hero page */
+.hero.hero-page > .container {
+  min-height: 400px;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.hero.hero-page .hero_title {
+  font-size: 36px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.hero_description {
+  color: var(--light);
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+/* breadcrumb */
+.hero_breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 14px;
+  color: var(--light);
+  font-weight: 500;
+}
+
+.hero_breadcrumb > a {
+  color: var(--primary);
+}
+
+.hero_breadcrumb > * {
+  display: inline-block;
+}
+
+.hero_breadcrumb_divider {
+  opacity: 0.8;
+}
+
+/* responsive */
+@media screen and (max-width: 800px) {
+  .hero_title {
+    font-size: 30px;
+  }
+
+  .hero_description {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero.hero-page .hero_title {
+    font-size: 32px;
+  }
+
+  .hero_description {
+    font-size: 14px;
+  }
+}
